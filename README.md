@@ -1,6 +1,8 @@
 Ansible Role: Maven Notifier
 ============================
 
+[![Build Status](https://travis-ci.org/gantsign/ansible-role-maven-notifier.svg?branch=master)](https://travis-ci.org/gantsign/ansible-role-maven-notifier)
+
 Role to install the Maven Notifier extension for Maven
 [https://github.com/jcgay/maven-notifier](https://github.com/jcgay/maven-notifier).
 
