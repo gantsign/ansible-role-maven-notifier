@@ -1,38 +1,80 @@
-Role Name
-=========
+Ansible Role: Maven Notifier
+============================
 
-A brief description of the role goes here.
+Role to install the Maven Notifier extension for Maven
+[https://github.com/jcgay/maven-notifier](https://github.com/jcgay/maven-notifier).
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Ubuntu with Maven >= 3.1 installed.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+The following variables will change the behavior of this role (default values
+are shown below):
+
+```yaml
+# Maven Notifier version number
+maven_notifier_version: 1.9.1
+
+# Location of the Maven installation to add the Maven Notifier extension to.
+maven_notifier_maven_home: "{{ ansible_local.maven.general.maven_home }}"
+
+# Mirror where to dowload Maven Notifier redistributable package from.
+maven_notifier_mirror: "http://dl.bintray.com/jcgay/maven/fr/jcgay/maven/maven-notifier/{{ maven_notifier_version }}"
+
+# SHA256 sum for the redistributable package
+maven_notifier_redis_sha256sum: ed6fbb0bffc633cf43b4f52d8aae33ac1ce313f7528ca4aecaa75559f8a3bfd5
+```
+
+Note: if you install Maven using `groover.maven` role it will set the fact
+`ansible_local.maven.general.maven_home`, which this role uses as the default
+value for the Maven installation directory. If you install Maven without setting
+the fact you will have to specify `maven_notifier_maven_home`.
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+`silpion.util`
+
+Note: `silpion.util` must be imported as follows in your `requirements.yml`:
+
+```yaml
+- src: groover.util
+  name: silpion.util
+```
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+If you install Maven using `groover.maven` this role can be used as follows:
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```yaml
+- hosts: servers
+  roles:
+     - { role: gantsign.maven_notifier }
+```
+
+If you install Maven using a different approach you'll need to specify the
+Maven home:
+
+```yaml
+- hosts: servers
+  roles:
+     - { role: gantsign.maven_notifier, maven_notifier_maven_home: /opt/maven/apache-maven-3.3.9 }
+```
 
 License
 -------
 
-BSD
+MIT
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+John Freeman
+
+GantSign Ltd.
+Company No. 06109112 (registered in England)
