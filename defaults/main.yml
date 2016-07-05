@@ -7,3 +7,6 @@ maven_notifier_mirror: "http://dl.bintray.com/jcgay/maven/fr/jcgay/maven/maven-n
 
 # Location of the Maven installation to add the Maven Notifier extension to.
 maven_notifier_maven_home: "{{ ansible_local.maven.general.maven_home }}"
+
+# path for ansible to store downloaded files
+local_ansible_data_path: '/tmp/ansible/data'

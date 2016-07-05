@@ -11,5 +11,4 @@ galaxy_info:
   galaxy_tags:
     - maven
     - ubuntu
-dependencies:
-  - role: silpion.util
+dependencies: []

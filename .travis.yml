@@ -19,9 +19,6 @@ install:
   - ansible --version
 
 script:
-  # Install dependencies
-  - ansible-galaxy install -r requirements.yml
-
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
 

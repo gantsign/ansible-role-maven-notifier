@@ -29,24 +29,15 @@ maven_notifier_mirror: "http://dl.bintray.com/jcgay/maven/fr/jcgay/maven/maven-n
 
 # SHA256 sum for the redistributable package
 maven_notifier_redis_sha256sum: ed6fbb0bffc633cf43b4f52d8aae33ac1ce313f7528ca4aecaa75559f8a3bfd5
+
+# path for ansible to store downloaded files
+local_ansible_data_path: '/tmp/ansible/data'
 ```
 
 Note: if you install Maven using `groover.maven` role it will set the fact
 `ansible_local.maven.general.maven_home`, which this role uses as the default
 value for the Maven installation directory. If you install Maven without setting
 the fact you will have to specify `maven_notifier_maven_home`.
-
-Dependencies
-------------
-
-`silpion.util`
-
-Note: `silpion.util` must be imported as follows in your `requirements.yml`:
-
-```yaml
-- src: groover.util
-  name: silpion.util
-```
 
 Example Playbook
 ----------------
