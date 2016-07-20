@@ -22,7 +22,7 @@
 - name: Download Maven Notifier
   tags: maven
   get_url:
-    url: "{{ maven_color_mirror }}/{{ maven_notifier_redis_filename }}"
+    url: "{{ maven_notifier_mirror }}/{{ maven_notifier_redis_filename }}"
     dest: "{{ local_ansible_data_path }}/{{ maven_notifier_redis_filename }}"
     sha256sum: "{{ maven_notifier_redis_sha256sum }}"
     force: false
