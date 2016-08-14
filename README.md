@@ -34,24 +34,8 @@ maven_notifier_redis_sha256sum: ed6fbb0bffc633cf43b4f52d8aae33ac1ce313f7528ca4ae
 local_ansible_data_path: '/tmp/ansible/data'
 ```
 
-Note: if you install Maven using `groover.maven` role it will set the fact
-`ansible_local.maven.general.maven_home`, which this role uses as the default
-value for the Maven installation directory. If you install Maven without setting
-the fact you will have to specify `maven_notifier_maven_home`.
-
 Example Playbook
 ----------------
-
-If you install Maven using `groover.maven` this role can be used as follows:
-
-```yaml
-- hosts: servers
-  roles:
-     - { role: gantsign.maven-notifier }
-```
-
-If you install Maven using a different approach you'll need to specify the
-Maven home:
 
 ```yaml
 - hosts: servers
