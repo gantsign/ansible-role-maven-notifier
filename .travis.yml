@@ -36,7 +36,7 @@ script:
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
 
   # Run the playbook with ansible-playbook
-  - sudo ansible-playbook tests/test.yml -i tests/inventory
+  - ansible-playbook tests/test.yml -i tests/inventory
 
   # Check Maven Notifier installed
   - find /opt/maven/apache-maven-3.3.9 | grep --color=never 'lib/ext/maven-notifier-'
