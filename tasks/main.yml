@@ -16,7 +16,7 @@
   tags: maven
   file:
     state: directory
-    mode: '0755'
+    mode: 'u=rwx,go=rx'
     dest: "{{ local_ansible_data_path }}"
 
 - name: Download Maven Notifier
@@ -28,7 +28,7 @@
     force: false
     use_proxy: true
     validate_certs: true
-    mode: '0644'
+    mode: 'u=rw,go=r'
 
 - name: Install Maven Notifier
   tags: maven
