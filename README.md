@@ -30,8 +30,8 @@ maven_notifier_mirror: "http://dl.bintray.com/jcgay/maven/fr/jcgay/maven/maven-n
 # SHA256 sum for the redistributable package
 maven_notifier_redis_sha256sum: ed6fbb0bffc633cf43b4f52d8aae33ac1ce313f7528ca4aecaa75559f8a3bfd5
 
-# path for Ansible to store downloaded files
-local_ansible_data_path: '/tmp/ansible/data'
+# Directory to store files downloaded for Maven Notifier installation
+maven_notifier_download_dir: "{{ x_ansible_download_dir | default('/tmp/ansible/data') }}"
 ```
 
 Example Playbook
