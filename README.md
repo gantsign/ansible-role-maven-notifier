@@ -27,11 +27,28 @@ maven_notifier_maven_home: "{{ ansible_local.maven.general.maven_home }}"
 # Mirror where to dowload Maven Notifier redistributable package from.
 maven_notifier_mirror: "http://dl.bintray.com/jcgay/maven/fr/jcgay/maven/maven-notifier/{{ maven_notifier_version }}"
 
-# SHA256 sum for the redistributable package
-maven_notifier_redis_sha256sum: ed6fbb0bffc633cf43b4f52d8aae33ac1ce313f7528ca4aecaa75559f8a3bfd5
-
 # Directory to store files downloaded for Maven Notifier installation
 maven_notifier_download_dir: "{{ x_ansible_download_dir | default('~/.ansible/tmp/downloads') }}"
+```
+
+### Supported Maven Notifier versions
+
+The following versions of Maven Notifier are supported without any additional
+configuration (for other versions follow the Advanced Configuration
+instructions):
+
+* `1.9.1`
+
+Advanced Configuration
+----------------------
+
+The following role variable is dependent on the Maven Notifier version; to use a
+Maven Notifier version **not pre-configured by this role** you must configure the
+variable below:
+
+```yaml
+# SHA256 sum for the redistributable package (i.e. maven-notifier-{{ maven_notifier_version }}-shaded.jar)
+maven_notifier_redis_sha256sum: ed6fbb0bffc633cf43b4f52d8aae33ac1ce313f7528ca4aecaa75559f8a3bfd5
 ```
 
 Example Playbook
