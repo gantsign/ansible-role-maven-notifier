@@ -30,6 +30,7 @@
   become: yes
   copy:
     src: "{{ local_ansible_data_path }}/{{ maven_notifier_redis_filename }}"
+    remote_src: yes
     dest: "{{ maven_notifier_maven_home }}/lib/ext/{{ maven_notifier_redis_filename }}"
     owner: root
     group: root
