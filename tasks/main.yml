@@ -1,22 +1,22 @@
 ---
-- name: Load version vars
+- name: load version vars
   with_first_found:
     - "../vars/versions/{{ maven_notifier_version }}.yml"
     - ../vars/versions/default.yml
   include_vars: "{{ item }}"
 
-- name: Assert version vars
+- name: assert version vars
   assert:
     that:
       - "maven_notifier_redis_sha256sum not in (None, '')"
 
-- name: Create download directory
+- name: create download directory
   file:
     state: directory
     mode: 'u=rwx,go=rx'
     dest: "{{ maven_notifier_download_dir }}"
 
-- name: Download Maven Notifier
+- name: download Maven Notifier
   get_url:
     url: "{{ maven_notifier_mirror }}/{{ maven_notifier_redis_filename }}"
     dest: "{{ maven_notifier_download_dir }}/{{ maven_notifier_redis_filename }}"
@@ -26,7 +26,7 @@
     validate_certs: true
     mode: 'u=rw,go=r'
 
-- name: Install Maven Notifier
+- name: install Maven Notifier
   become: yes
   copy:
     src: "{{ maven_notifier_download_dir }}/{{ maven_notifier_redis_filename }}"
