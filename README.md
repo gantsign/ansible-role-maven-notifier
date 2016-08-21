@@ -22,7 +22,7 @@ are shown below):
 maven_notifier_version: 1.9.1
 
 # Location of the Maven installation to add the Maven Notifier extension to.
-maven_notifier_maven_home: "{{ ansible_local.maven.general.maven_home }}"
+maven_notifier_maven_home: "{{ ansible_local.maven.general.home }}"
 
 # Mirror where to dowload Maven Notifier redistributable package from.
 maven_notifier_mirror: "http://dl.bintray.com/jcgay/maven/fr/jcgay/maven/maven-notifier/{{ maven_notifier_version }}"
