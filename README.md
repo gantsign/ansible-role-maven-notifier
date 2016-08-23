@@ -9,7 +9,25 @@ Role to install the Maven Notifier extension for Maven
 Requirements
 ------------
 
-Ubuntu with Maven >= 3.1 installed.
+* Ubuntu
+
+    * Trusty (14.04)
+    * Wily (15.10)
+    * Xenial (16.04)
+    * Note: other Ubuntu versions are likely to work but have not been tested.
+
+* Maven >= 3.1
+
+    * **Warning:** Maven must be installed from a standard `tar.gz` binary
+      package; using this role to modify a copy of Maven installed by your
+      Linux distributions package management tool (e.g. `apt-get install`) is
+      not recommended.
+
+    * **Recommendation:** use the
+      [gantsign.maven](https://galaxy.ansible.com/gantsign/maven/) role to
+      install Maven.
+
+* Ansible >= 2.0
 
 Role Variables
 --------------
