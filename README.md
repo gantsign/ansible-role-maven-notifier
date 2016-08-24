@@ -79,6 +79,24 @@ Example Playbook
      - { role: gantsign.maven-notifier, maven_notifier_maven_home: /opt/maven/apache-maven-3.3.9 }
 ```
 
+Related Roles
+-------------
+
+You may find the following related roles useful:
+
+* [gantsign.java](https://galaxy.ansible.com/gantsign/java) for installing the
+  Oracle JDK.
+
+* [gantsign.maven](https://galaxy.ansible.com/gantsign/maven) for installing
+  Apache Maven.
+
+* [gantsign.maven-color](https://galaxy.ansible.com/gantsign/maven-color) for
+  providing a GUI notification when a build ends.
+
+    * Installs the [Maven Color](https://github.com/jcgay/maven-color)
+      extension for Maven authored by
+      [Jean-Christophe Gay](https://github.com/jcgay).
+
 Development & Testing
 ---------------------
 
