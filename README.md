@@ -50,7 +50,7 @@ maven_notifier_mirror: "http://dl.bintray.com/jcgay/maven/fr/jcgay/maven/maven-n
 maven_notifier_download_dir: "{{ x_ansible_download_dir | default('~/.ansible/tmp/downloads') }}"
 ```
 
-### Supported Maven Notifier versions
+### Supported Maven Notifier Versions
 
 The following versions of Maven Notifier are supported without any additional
 configuration (for other versions follow the Advanced Configuration
