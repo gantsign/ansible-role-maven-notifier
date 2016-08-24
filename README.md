@@ -4,8 +4,10 @@ Ansible Role: Maven Notifier
 [![Build Status](https://travis-ci.org/gantsign/ansible-role-maven-notifier.svg?branch=master)](https://travis-ci.org/gantsign/ansible-role-maven-notifier)
 [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-gantsign.maven--notifier-blue.svg)](https://galaxy.ansible.com/gantsign/maven-notifier)
 
-Role to install the Maven Notifier extension for Maven
-[https://github.com/jcgay/maven-notifier](https://github.com/jcgay/maven-notifier).
+This role installs the
+[Maven Notifier](https://github.com/jcgay/maven-notifier)
+extension for Maven authored by
+[Jean-Christophe Gay](https://github.com/jcgay).
 
 Requirements
 ------------
