@@ -99,7 +99,7 @@ You may find the following related roles useful:
       extension for Maven authored by
       [Jean-Christophe Gay](https://github.com/jcgay).
 
-More roles from GantSign
+More Roles From GantSign
 ------------------------
 
 You can find more roles from GantSign on [Ansible Galaxy](https://galaxy.ansible.com/gantsign).
