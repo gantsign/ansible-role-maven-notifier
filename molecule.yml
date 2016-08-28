@@ -22,6 +22,3 @@ docker:
   - name: ansible-role-maven-notifier-01
     image: ubuntu
     image_version: '16.04'
-
-testinfra:
-  hosts: ansible-role-maven-notifier-01
