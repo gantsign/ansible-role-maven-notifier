@@ -25,6 +25,13 @@
         state: present
       when: "ansible_distribution == 'Ubuntu' and ansible_distribution_version != '14.04'"
 
+    - name: install jdk 8 (yum)
+      become: yes
+      yum:
+        name: java-1.8.0-openjdk-headless
+        state: present
+      when: ansible_pkg_mgr == 'yum'
+
   roles:
     - role: gantsign.maven
       maven_version: '3.3.9'
