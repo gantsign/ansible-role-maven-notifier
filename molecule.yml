@@ -19,6 +19,9 @@ ansible:
 
 docker:
   containers:
-  - name: ansible-role-maven-notifier-01
+  - name: ansible-role-maven-notifier-ubuntu-trusty
+    image: ubuntu
+    image_version: '14.04'
+  - name: ansible-role-maven-notifier-ubuntu-xenial
     image: ubuntu
     image_version: '16.04'
