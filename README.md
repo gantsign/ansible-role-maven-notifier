@@ -15,12 +15,22 @@ Requirements
 
 * Ansible >= 2.0
 
-* Ubuntu
+* Linux Distribution
 
-    * Trusty (14.04)
-    * Wily (15.10)
-    * Xenial (16.04)
-    * Note: other Ubuntu versions are likely to work but have not been tested.
+    * Debian Family
+
+        * Debian
+
+            * Wheezy (7)
+            * Jessie (8)
+
+        * Ubuntu
+
+            * Trusty (14.04)
+            * Wily (15.10)
+            * Xenial (16.04)
+
+    * Note: other versions are likely to work but have not been tested.
 
 * Maven >= 3.1
 
