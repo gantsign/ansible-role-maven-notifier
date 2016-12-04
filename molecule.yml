@@ -1,20 +1,9 @@
 ---
-molecule:
-  test:
-      # Sequence of commands to run when performing `molecule test`
-      sequence:
-        - destroy
-        # - syntax
-        - create
-        - converge
-        # Run `syntax` after `converge` (i.e. after dependencies have been
-        # downloaded from Ansible Galaxy).
-        - syntax
-        - idempotence
-        - verify
-
 ansible:
   playbook: tests/test.yml
+
+dependency:
+  name: galaxy
   requirements_file: tests/requirements.yml
 
 docker:
