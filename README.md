@@ -67,7 +67,7 @@ maven_notifier_maven_home: '{{ ansible_local.maven.general.home }}'
 maven_notifier_mirror: 'http://dl.bintray.com/jcgay/maven/fr/jcgay/maven/maven-notifier/{{ maven_notifier_version }}'
 
 # Directory to store files downloaded for Maven Notifier installation
-maven_notifier_download_dir: "{{ x_ansible_download_dir | default('~/.ansible/tmp/downloads') }}"
+maven_notifier_download_dir: "{{ x_ansible_download_dir | default(ansible_env.HOME + '/.ansible/tmp/downloads') }}"
 ```
 
 ### Supported Maven Notifier Versions
