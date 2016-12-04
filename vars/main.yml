@@ -1,2 +1,2 @@
 # filename of Maven Notifier redistributable package
-maven_notifier_redis_filename: "maven-notifier-{{ maven_notifier_version }}-shaded.jar"
+maven_notifier_redis_filename: 'maven-notifier-{{ maven_notifier_version }}-shaded.jar'
