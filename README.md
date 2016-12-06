@@ -41,6 +41,12 @@ Requirements
 
             * 25
 
+    * SUSE Family
+
+        * OpenSUSE
+
+            * 42.2
+
     * Note: other versions are likely to work but have not been tested.
 
 * Maven >= 3.1
