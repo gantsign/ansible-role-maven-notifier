@@ -6,6 +6,10 @@ dependency:
   name: galaxy
   requirements_file: tests/requirements.yml
 
+
+driver:
+  name: docker
+
 docker:
   containers:
   - name: ansible-role-maven-notifier-debian-wheezy
@@ -34,3 +38,6 @@ docker:
     image: opensuse
     image_version: '42.2'
     command: /bin/bash
+
+verifier:
+  name: testinfra
