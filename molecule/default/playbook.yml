@@ -1,6 +1,6 @@
 ---
-- hosts: all
-  remote_user: root
+- name: Converge
+  hosts: all
 
   pre_tasks:
     # Travis CI doesn't provide all the Debian dependencies for the full JDK.
@@ -25,28 +25,12 @@
         state: present
       when: "ansible_distribution == 'Ubuntu' and ansible_distribution_version != '14.04'"
 
-    - name: install Ansible dnf dependency (dnf)
-      become: yes
-      command: dnf install -y python2-dnf
-      args:
-        warn: no
-      changed_when: no
-      when: ansible_pkg_mgr == 'dnf'
-
     - name: install jdk 8 (yum, dnf)
       become: yes
       package:
         name: java-1.8.0-openjdk-headless
         state: present
       when: ansible_pkg_mgr in ('yum', 'dnf')
-
-    - name: install Ansible zypper dependency (zypper)
-      become: yes
-      command: zypper install -y python-xml
-      args:
-        warn: no
-      changed_when: no
-      when: ansible_pkg_mgr == 'zypper'
 
     - name: install jdk 8 (zypper)
       become: yes
