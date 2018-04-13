@@ -68,7 +68,7 @@ are shown below):
 
 ```yaml
 # Maven Notifier version number
-maven_notifier_version: '1.9.1'
+maven_notifier_version: '1.10.0'
 
 # Location of the Maven installation to add the Maven Notifier extension to.
 maven_notifier_maven_home: '{{ ansible_local.maven.general.home }}'
@@ -86,6 +86,7 @@ The following versions of Maven Notifier are supported without any additional
 configuration (for other versions follow the Advanced Configuration
 instructions):
 
+* `1.10.0`
 * `1.9.1`
 
 Advanced Configuration
