@@ -106,7 +106,8 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-     - { role: gantsign.maven-notifier, maven_notifier_maven_home: /opt/maven/apache-maven-3.3.9 }
+    - role: gantsign.maven-notifier
+      maven_notifier_maven_home: /opt/maven/apache-maven-3.3.9
 ```
 
 Related Roles
