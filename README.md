@@ -23,6 +23,7 @@ Requirements
 
             * Wheezy (7)
             * Jessie (8)
+            * Stretch (9)
 
         * Ubuntu
 
