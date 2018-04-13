@@ -9,8 +9,8 @@ lint:
   name: yamllint
 
 platforms:
-  - name: ansible-role-maven-notifier-fedora-25
-    image: fedora:25
+  - name: ansible-role-maven-notifier-fedora-27
+    image: fedora:27
 
 provisioner:
   name: ansible
