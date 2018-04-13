@@ -5,8 +5,8 @@
   pre_tasks:
     - name: install jdk 8
       become: yes
-      apt:
-        name: openjdk-8-jdk
+      package:
+        name: java-1.8.0-openjdk-headless
         state: present
 
   roles:

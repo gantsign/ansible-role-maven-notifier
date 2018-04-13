@@ -1,0 +1,3 @@
+---
+- src: gantsign.maven
+  version: '3.3.0'
