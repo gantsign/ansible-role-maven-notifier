@@ -9,7 +9,7 @@ lint:
   name: yamllint
 
 platforms:
-  - name: ansible-role-maven-notifier-debian-stretch
+  - name: ansible-role-maven-notifier-debian-max
     image: debian:9
 
 provisioner:

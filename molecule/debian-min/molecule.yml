@@ -9,7 +9,7 @@ lint:
   name: yamllint
 
 platforms:
-  - name: ansible-role-maven-notifier-debian-wheezy
+  - name: ansible-role-maven-notifier-debian-min
     image: debian:7
 
 provisioner:
