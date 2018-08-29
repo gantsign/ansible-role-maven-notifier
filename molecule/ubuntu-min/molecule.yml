@@ -9,7 +9,7 @@ lint:
   name: yamllint
 
 platforms:
-  - name: ansible-role-maven-notifier-ubuntu-trusty
+  - name: ansible-role-maven-notifier-ubuntu-min
     image: ubuntu:14.04
 
 provisioner:
