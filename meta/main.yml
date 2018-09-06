@@ -29,4 +29,5 @@ galaxy_info:
   galaxy_tags:
     - maven
     - ubuntu
+    - development
 dependencies: []
