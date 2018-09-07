@@ -21,7 +21,6 @@ Requirements
 
         * Debian
 
-            * Wheezy (7)
             * Jessie (8)
             * Stretch (9)
 
