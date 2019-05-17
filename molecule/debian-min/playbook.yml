@@ -2,15 +2,9 @@
 - name: Converge
   hosts: all
 
-  pre_tasks:
-    # Travis CI doesn't provide all the Debian dependencies for the full JDK.
-    - name: install jre-headless 7
-      become: yes
-      apt:
-        name: openjdk-7-jre-headless
-        state: present
-
   roles:
+    - role: gantsign.java
+      java_version: '8'
     - role: gantsign.maven
       maven_version: '3.3.9'
       maven_install_dir: /opt/maven
