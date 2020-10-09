@@ -1,11 +1,3 @@
-import os
-
-import testinfra.utils.ansible_runner
-
-testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
-    os.environ['MOLECULE_INVENTORY_FILE']).get_hosts('all')
-
-
 def test_maven_notifier(host):
     cmd = "mvn '-Djavax.accessibility.assistive_technologies= ' help:help"
     assert host.run('/bin/bash --login -c %s', cmd).rc == 0
