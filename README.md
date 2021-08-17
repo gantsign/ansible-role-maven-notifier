@@ -33,7 +33,7 @@ Requirements
 
         * CentOS
 
-            * 6
+            * 7
             * 8
 
         * Fedora
