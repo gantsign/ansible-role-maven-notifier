@@ -1,7 +1,7 @@
 Ansible Role: Maven Notifier
 ============================
 
-[![Build Status](https://travis-ci.com/gantsign/ansible-role-maven-notifier.svg?branch=master)](https://travis-ci.com/gantsign/ansible-role-maven-notifier)
+[![Tests](https://github.com/gantsign/ansible-role-maven-notifier/workflows/Tests/badge.svg)](https://github.com/gantsign/ansible-role-maven-notifier/actions?query=workflow%3ATests)
 [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-gantsign.maven--notifier-blue.svg)](https://galaxy.ansible.com/gantsign/maven-notifier)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/gantsign/ansible-role-maven-notifier/master/LICENSE)
 
