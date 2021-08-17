@@ -73,7 +73,7 @@ maven_notifier_version: '2.1.0'
 maven_notifier_maven_home: '{{ ansible_local.maven.general.home }}'
 
 # Mirror where to dowload Maven Notifier redistributable package from.
-maven_notifier_mirror: 'http://dl.bintray.com/jcgay/maven/fr/jcgay/maven/maven-notifier/{{ maven_notifier_version }}'
+maven_notifier_mirror: 'https://repo.maven.apache.org/maven2/fr/jcgay/maven/maven-notifier/{{ maven_notifier_version }}'
 
 # Directory to store files downloaded for Maven Notifier installation
 maven_notifier_download_dir: "{{ x_ansible_download_dir | default(ansible_env.HOME + '/.ansible/tmp/downloads') }}"
