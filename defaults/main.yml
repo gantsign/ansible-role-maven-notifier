@@ -1,6 +1,6 @@
 ---
 # Maven Notifier version number
-maven_notifier_version: '2.1.0'
+maven_notifier_version: '2.1.2'
 
 # Mirror where to dowload Maven Notifier redistributable package from.
 maven_notifier_mirror: 'https://repo.maven.apache.org/maven2/fr/jcgay/maven/maven-notifier/{{ maven_notifier_version }}'
