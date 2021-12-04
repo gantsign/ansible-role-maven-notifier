@@ -3,20 +3,16 @@
   hosts: all
 
   pre_tasks:
-    - name: install OpenJDK PPA
-      apt_repository:
-        repo: ppa:openjdk-r/ppa
+    - name: update apt cache
+      apt:
+        update_cache: yes
+      changed_when: no
 
     - name: install jdk 8
       become: yes
       apt:
         name: openjdk-8-jdk
         state: present
-
-    - name: update ca-certificates
-      become: yes
-      command: update-ca-certificates --fresh
-      changed_when: no
 
   roles:
     - role: gantsign.maven
