@@ -1,0 +1,6 @@
+---
+# SHA256 sum for the redistributable package
+maven_notifier_redis_sha256sum: '4f400379553e12e3307b35b43bd005e80b14043d1787015d3a9ce32eb27c3bb3'
+
+# filename of Maven Notifier redistributable package
+maven_notifier_redis_filename: 'maven-notifier-{{ maven_notifier_version }}.jar'
